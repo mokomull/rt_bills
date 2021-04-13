@@ -12,7 +12,8 @@ class Bill:
         self.bill_due_day = bill_due_day
 
     def get_due_date_bounds(
-            self, timestamp: Optional[datetime]
+        self,
+        timestamp: Optional[datetime] = None
     ) -> Optional[Tuple[datetime, datetime]]:
         if timestamp is None:
             timestamp = datetime.utcnow()
